@@ -19,6 +19,7 @@
 		376B117C25EFF70200FE4A6B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 376B117A25EFF70200FE4A6B /* LaunchScreen.storyboard */; };
 		376B118725EFF70200FE4A6B /* podpodExamplesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 376B118625EFF70200FE4A6B /* podpodExamplesTests.swift */; };
 		376B119225EFF70300FE4A6B /* podpodExamplesUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 376B119125EFF70300FE4A6B /* podpodExamplesUITests.swift */; };
+		376B11A425EFFC1900FE4A6B /* podpod.swift in Sources */ = {isa = PBXBuildFile; fileRef = 376B11A325EFFC1900FE4A6B /* podpod.swift */; };
 		607FACEC1AFB9204008FA782 /* Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACEB1AFB9204008FA782 /* Tests.swift */; };
 /* End PBXBuildFile section */
 
@@ -67,8 +68,9 @@
 		376B118D25EFF70200FE4A6B /* podpodExamplesUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = podpodExamplesUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		376B119125EFF70300FE4A6B /* podpodExamplesUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = podpodExamplesUITests.swift; sourceTree = "<group>"; };
 		376B119325EFF70300FE4A6B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		376B11A325EFFC1900FE4A6B /* podpod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = podpod.swift; sourceTree = "<group>"; };
 		3850F99CAEE08956CC2BB716 /* Pods-podpod_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-podpod_Tests.debug.xcconfig"; path = "Target Support Files/Pods-podpod_Tests/Pods-podpod_Tests.debug.xcconfig"; sourceTree = "<group>"; };
-		5C66C0AC20D4882F4D7122E6 /* podpod.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = podpod.podspec; path = ../podpod.podspec; sourceTree = "<group>"; };
+		5C66C0AC20D4882F4D7122E6 /* podpod.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = podpod.podspec; path = ../podpod.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		607FACE51AFB9204008FA782 /* podpod_Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = podpod_Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		607FACEA1AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		607FACEB1AFB9204008FA782 /* Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests.swift; sourceTree = "<group>"; };
@@ -140,6 +142,7 @@
 			children = (
 				376B115125EFF63B00FE4A6B /* podpod.h */,
 				376B115225EFF63B00FE4A6B /* Info.plist */,
+				376B11A325EFFC1900FE4A6B /* podpod.swift */,
 			);
 			path = podpod;
 			sourceTree = "<group>";
@@ -384,6 +387,7 @@
 					376B114E25EFF63B00FE4A6B = {
 						CreatedOnToolsVersion = 12.4;
 						DevelopmentTeam = 8LRXBU679F;
+						LastSwiftMigration = 1240;
 						ProvisioningStyle = Automatic;
 					};
 					376B115625EFF63B00FE4A6B = {
@@ -535,6 +539,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				376B11A425EFFC1900FE4A6B /* podpod.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -626,6 +631,7 @@
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_WEAK = YES;
 				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
@@ -651,6 +657,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
@@ -664,6 +671,7 @@
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_WEAK = YES;
 				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
@@ -696,6 +704,7 @@
 		376B116225EFF63B00FE4A6B /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -725,6 +734,7 @@
 		376B116325EFF63B00FE4A6B /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
